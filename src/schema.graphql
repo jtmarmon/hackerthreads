@@ -1,0 +1,13 @@
+type Post {
+  db/ident: Int
+  post/title: String
+  post/body: String
+}
+
+type QueryRoot {
+  posts: [Post]
+}
+
+directive @live on QUERY
+
+schema { query: QueryRoot }
